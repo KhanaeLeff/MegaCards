@@ -6,10 +6,41 @@
     <link rel="stylesheet" href="bootstrap.min.css">
   </head>
   <body>
+    <!-- <button onclick="reglesDuJeu()">Règles du Jeu</button> -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+      Règles du Jeu
+    </button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Comment qu'on joue ?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Un joueur gagne une partie de cartes quand il termine avec plus de cartes que l'autre. Pour ce faire il doit capturer celles de l'autre joueur (et éviter que celui-ci n'en fasse autant).</br></br>
+            Description d'une carte:</br>
+            Une carte se compose d'une image et d'une caractéristique (qui varie de 1 à 10) pour chacun de ses côtés. Chacune des 563 cartes est différente.</br></br>
+            Choix des cartes:</br>
+            L'un après l'autre, chaque joueur choisi parmi les cartes proposées aléatoirement une carte, jusqu'à un total de 5, qui constitueront votre main.  Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire. </br></br>
+            La partie: </br>
+            Le premier joueur est déterminé aléatoirement. Celui-ci pose une carte au choix sur une des cases du plateau. Le 2° en pose une à sont tour: si les 2 cartes se touchent par un de leurs côtés et si la carte posée(attaque) a un chiffre supérieur à celle déjà sur le plateau (défense), la carte change de camp. Si les 2 scores sont égaux, il ne se passe rien.</br>
+            La partie se termine quand 9 cartes ont été posées.</br>
+            Celui qui a le plus de cartes est le vainqueur.</br></br>
+            Pour relancer une partie, appuyez sur la touche F5 ;)
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">J'ai tout compris !</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid">
-
-      <h1>Exemple de création de HTML à partir de l'API</h1>
 
       <div id="main">
         <!-- ON VA INSERER DU HTML ICI -->   
@@ -18,7 +49,14 @@
     </div> <!-- ferme container-fluid -->
 
     <!-- LE SCRIPT QUI CONTIENT NOTRE APPLI JS -->
-    <script src="app.js"></script>
-
+<!-- <script>
+      function reglesDuJeu(){
+        alert("Règles du Jeu:\nUn joueur gagne une partie de cartes quand il termine avec plus de cartes que l'autre. Pour ce faire il doit capturer celles de l'autre joueur (et éviter que celui-ci n'en fasse autant).\n\nDescription d'une carte:\nUne carte est composée de 5 choses: une image (de monstre, de boss ou de personnage), une caractéristique (qui varie de 1 à 10) pour chacun de ses côtés. Chacune des 563 cartes est différente.\n\nChoix des cartes:\nL'un après l'autre, chaque joueur choisi parmi les cartes proposées aléatoirement une carte, jusqu'à un total de 5, qui constitueront votre main.  Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire.\n\nLa partie:\nLe premier joueur est déterminé aléatoirement. Celui-ci pose une carte au choix sur une des cases du plateau. Le 2° en pose une à sont tour: si les 2 cartes se touchent par un de leurs côtés et si la carte posée(attaque) a un chiffre supérieur à celle déjà sur le plateau (défense), la carte change de camp. Si les 2 scores sont égaux, il ne se passe rien.\nLa partie se termine quand 9 cartes ont été posées. Celui qui a le plus de cartes est le vainqueur.");
+        alert()
+      }
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
