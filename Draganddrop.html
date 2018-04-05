@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test du terrain</title>
+    <!-- test et code du drag and drop -->
+    
+    <!-- Fin du test et du code de drag and drop -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="Draganddrop.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+      <h1>Test Terrain </h1>
+
+      <div class="container">
+        <div class="row taille"> <!-- Partie supérieur du plateau -->
+
+          <div class="col-2 gris">
+            <img id="drag1" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la dolofonction -->
+          </div>
+
+          <div class="col-2 offset-8 gris">
+            <img id="drag2" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+          </div>
+
+        </div>
+
+
+
+        <div class="row taille"> <!-- plateau de jeu -->
+
+          <div class="col-2 gris">
+            <img id="drag3" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+          </div>
+          <div class="col-2 offset-1 jaune" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="col-2 jaune" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="col-2 jaune" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="col-2 offset-1 gris">
+            <img id="drag4" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+           <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+          </div>
+
+        </div>
+
+          <div class="row taille">
+            <div class="col-2 gris">
+              <img id="drag5" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+            <div class="col-2 offset-1 jaune id="div4" ondrop="drop(event)" ondragover="allowDrop(event)""></div>
+            <div class="col-2 jaune" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 jaune" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 offset-1 gris">
+              <img id="drag6" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+           <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+          </div>
+
+          <div class="row taille">
+            <div class="col-2 gris">
+              <img id="drag7" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+            <div class="col-2 offset-1 jaune id="div7" ondrop="drop(event)" ondragover="allowDrop(event)""></div>
+            <div class="col-2 jaune" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 jaune" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 offset-1 gris id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"">
+              <img id="drag8" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+          </div> <!-- fin de la partie du plateau -->
+
+          <div class="row taille"> <!-- partie inférieure au plateau -->
+
+            <div class="col-2 gris">
+              <img id="drag9" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+            <div class="col-2 offset-8 gris">
+              <img id="drag10" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+          </div>
+
+        </div> <!-- ferme le container -->
+
+
+        <!-- ON VA INSERER DU HTML ICI -->   
+
+    </div> <!-- ferme container-fluid -->
+
+    <!-- LE SCRIPT QUI CONTIENT NOTRE APPLI JS -->
+    <script src="app.js"></script>
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+
+  </body>
+</html>

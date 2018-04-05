@@ -1,0 +1,13 @@
+.gris {
+ 	background-color: grey;
+ 	border: 1px solid black;
+}
+.jaune {
+	background-color: orange;
+	border: 1px solid black;
+}
+
+.taille {
+	height: 33vh ;
+	overflow: hidden;
+}
