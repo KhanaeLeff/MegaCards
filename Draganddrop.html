@@ -11,15 +11,10 @@
   </head>
   <body onload="alert(`Bienvenue dans MegaCards ! 
 L'un après l'autre, chaque joueur choisi une carte parmi celles proposées, jusqu'à un total de 5, qui constitueront sa main. Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire.
-Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'`);">
+  Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'`);">
 <!--Bouton des règles-->
-    <button type="button" class="btn btn-alert" data-toggle="modal" data-target="#exampleModal">
-    Règles du Jeu
-    </button>
-    
 
     <div class="container">
-      <a href="Draganddrop.html" class=" rejouer btn btn-alert btn-lg active" role="button" aria-pressed="true">Rejouer?</a>
       <input type="checkbox" id="closeMe">
       <div class="row" id="main">
     
@@ -129,13 +124,17 @@ Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'`
       </div>
     </div> <!-- ferme le container -->  
     <button type="button" class="j1 btn btn-primary">
-    Profile <span class="badge badge-light">5</span>
+    Joueur 1 <span class="badge badge-light">5</span>
     <span class="sr-only">Joueur 1</span>
     </button>
     <button type="button" class="j2 btn btn-danger">
-    Profile <span class="badge badge-light">5</span>
+    Joueur 2 <span class="badge badge-light">5</span>
     <span class="sr-only">Joueur 2</span>
     </button>
+    <button type="button" class="regles btn btn-info" data-toggle="modal" data-target="#exampleModal">
+    Règles du Jeu
+    </button>
+    <a href="Draganddrop.html" class=" rejouer btn btn-warning btn-lg active" role="button" aria-pressed="true">Rejouer?</a>
 
 
     <!-- LE SCRIPT QUI CONTIENT NOTRE APPLI JS -->
