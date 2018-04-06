@@ -1,7 +1,8 @@
 const targetElement = document.getElementById('main')
+let heroId = 643
 
 // Requête une URL pour récupérer UN héros
-fetch('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/643.json')
+fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${heroId}.json`)
 .then(response => response.json())
 .then(hero => {
 
