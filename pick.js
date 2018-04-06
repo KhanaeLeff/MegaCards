@@ -31,7 +31,7 @@ for(numberIndex of output) {
 //   const lienIndexId = allHeroes.map(hero => hero.id)
 //   console.log(JSON.stringify(lienIndexId))
 // })
-let html = `<label for="closeMe"><div class="cross"></div></label>\n`
+let html = `<label for="closeMe"><div class="cross"></div></label>\n<h1 class="pickCards">Bienvenue mes amis!</h1>`
 let id ='drag'
 
 for(carte of association) {

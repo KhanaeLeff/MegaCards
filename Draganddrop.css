@@ -1,8 +1,10 @@
 .gris {
+    display:flex;
  	background-color: grey;
- 	border: 1px solid black;
+    border: 1px solid black;
 }
 .jaune {
+    display:flex;
 	background-color: orange;
 	border: 1px solid black;
 }
@@ -14,19 +16,19 @@
 
 #main{
     position:fixed;
-    top:calc(50vh - 379px);
+    top:calc(50vh - 250px);
     left:calc(15px + calc(50vw - 505px));
     display:flex;
     width:1010px;
     min-width:1010px;
-    min-height:758px;
+    min-height:500px;
     border:1px solid black;
     z-index: 10;
     background-color: white;
 }
 .cross{
     position:absolute;
-    bottom:10px;
+    top:10px;
     right:10px;
     width:20px;
     height:20px;
@@ -38,11 +40,16 @@
 #closeMe:checked ~ #main{
     display:none;
 }
+.pickCards{
+    text-align:center;
+    margin:30px 33% 0;
+}
 .carte{
     position:relative;
-    width:242px;
-    max-width:242px;
-    height:242px;
+    width:calc(20vh - 4px);
+    max-width:calc(20vh - 4px);
+    min-width:calc(20vh - 4px);
+    height:calc(20vh - 4px);
     background-color:black;
     margin:auto;
     border:1px solid black;
@@ -58,7 +65,9 @@
 .portrait{
     position:absolute;
     top:0;
-    left:40px;
+    left:26px;
+    width:auto;
+    height:calc(20vh - 6px);
     z-index:0;
 }
 .nom{
