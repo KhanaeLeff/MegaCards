@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test du terrain</title>
+    <!-- test et code du drag and drop -->
+    
+    <!-- Fin du test et du code de drag and drop -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="Draganddrop.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body onload="alert(`Bienvenue dans MegaCards ! 
+L'un après l'autre, chaque joueur choisi une carte parmi celles proposées, jusqu'à un total de 5, qui constitueront sa main. Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire.
+Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'`);">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+      Règles du Jeu
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Comment qu'on joue ?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Un joueur gagne une partie de cartes quand il termine avec plus de cartes que l'autre. Pour ce faire il doit capturer celles de l'autre joueur (et éviter que celui-ci n'en fasse autant).</br></br>
+            Description d'une carte:</br>
+            Une carte se compose d'une image et d'une caractéristique (qui varie de 1 à 10) pour chacun de ses côtés. Chacune des 563 cartes est différente.</br></br>
+            Choix des cartes:</br>
+            L'un après l'autre, chaque joueur choisi parmi les cartes proposées aléatoirement une carte, jusqu'à un total de 5, qui constitueront votre main.  Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire. </br></br>
+            La partie: </br>
+            Le premier joueur est déterminé aléatoirement. Celui-ci pose une carte au choix sur une des cases du plateau. Le 2° en pose une à sont tour: si les 2 cartes se touchent par un de leurs côtés et si la carte posée(attaque) a un chiffre supérieur à celle déjà sur le plateau (défense), la carte change de camp. Si les 2 scores sont égaux, il ne se passe rien.</br>
+            La partie se termine quand 9 cartes ont été posées.</br>
+            Celui qui a le plus de cartes est le vainqueur.</br></br>
+            <hr>
+            Pour relancer une partie, appuyez sur la touche F5 ;)
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">J'ai tout compris !</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <h1>Test Terrain </h1>
+
+      <div class="container">
+        <div class="row taille"> <!-- Partie supérieur du plateau -->
+
+          <div class="col-2 gris">
+            <img id="drag1" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la dolofonction -->
+          </div>
+
+          <div class="col-2 offset-8 gris">
+            <img id="drag2" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+          </div>
+
+        </div>
+
+
+
+        <div class="row taille"> <!-- plateau de jeu -->
+
+          <div class="col-2 gris">
+            <img id="drag3" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+          </div>
+          <div class="col-2 offset-1 jaune" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="col-2 jaune" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="col-2 jaune" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div class="col-2 offset-1 gris">
+            <img id="drag4" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+           <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+          </div>
+
+        </div>
+
+          <div class="row taille">
+            <div class="col-2 gris">
+              <img id="drag5" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+            <div class="col-2 offset-1 jaune id="div4" ondrop="drop(event)" ondragover="allowDrop(event)""></div>
+            <div class="col-2 jaune" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 jaune" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 offset-1 gris">
+              <img id="drag6" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+           <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+          </div>
+
+          <div class="row taille">
+            <div class="col-2 gris">
+              <img id="drag7" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+            <div class="col-2 offset-1 jaune id="div7" ondrop="drop(event)" ondragover="allowDrop(event)""></div>
+            <div class="col-2 jaune" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 jaune" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="col-2 offset-1 gris id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"">
+              <img id="drag8" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" ><!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+          </div> <!-- fin de la partie du plateau -->
+
+          <div class="row taille"> <!-- partie inférieure au plateau -->
+
+            <div class="col-2 gris">
+              <img id="drag9" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+            <div class="col-2 offset-8 gris">
+              <img id="drag10" src="http://via.placeholder.com/160x200" draggable="true" ondragstart="drag(event)" >
+             <!-- Ici se trouve dans les id de div, le code pour drag and drop , ratachée à la fonction -->
+            </div>
+
+          </div>
+
+        </div> <!-- ferme le container -->
+
+
+        <!-- ON VA INSERER DU HTML ICI -->   
+
+    </div> <!-- ferme container-fluid -->
+
+    <!-- LE SCRIPT QUI CONTIENT NOTRE APPLI JS -->
+    <script src="app.js"></script>
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+
+  </body>
+</html>
