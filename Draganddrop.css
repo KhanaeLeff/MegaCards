@@ -1,0 +1,90 @@
+.gris {
+ 	background-color: grey;
+ 	border: 1px solid black;
+}
+.jaune {
+	background-color: orange;
+	border: 1px solid black;
+}
+
+.taille {
+	height: 20vh ;
+	overflow: hidden;
+}
+
+#main{
+    position:fixed;
+    top:calc(50vh - 379px);
+    left:calc(15px + calc(50vw - 505px));
+    display:flex;
+    width:1010px;
+    min-width:1010px;
+    min-height:758px;
+    border:1px solid black;
+    z-index: 10;
+    background-color: white;
+}
+.cross{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    width:20px;
+    height:20px;
+    background-color:red;
+}
+#closeMe{
+    display:none;
+}
+#closeMe:checked ~ #main{
+    display:none;
+}
+.carte{
+    position:relative;
+    width:242px;
+    max-width:242px;
+    height:242px;
+    background-color:black;
+    margin:auto;
+    border:1px solid black;
+    border-radius:15px;
+}
+.caracteristique{
+    position:absolute;
+    color:white;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    margin:0;
+    z-index:10;
+}
+.portrait{
+    position:absolute;
+    top:0;
+    left:40px;
+    z-index:0;
+}
+.nom{
+    left:5px;
+    bottom:5px;
+    font-size:19px;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    margin:0;
+}
+.pouvoir, .force, .vitesse, .combat{
+    width:20px;
+    text-align:center;
+}
+.pouvoir{
+    top:5px;
+    right:15px;
+}
+.force{
+    top:20px;
+    right:5px;
+}
+.vitesse{
+    top:35px;
+    right:15px;
+}
+.combat{
+    top:20px;
+    right:25px;
+}
