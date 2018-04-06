@@ -110,10 +110,10 @@
 }
 .rejouer{
     position: absolute;
-    bottom:10px;
+    bottom:11px;
     right:300px;
-    padding-top:1px;
-    padding-left:45px;
+    padding:5px 30px;
+    padding-left:30px;
     font-size: 17px;
 }
 .j2{
