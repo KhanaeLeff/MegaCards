@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="Draganddrop.css">
   </head>
-  <body>
+  <body _onload="alert(`Bienvenue dans MegaCards ! 
+L'un après l'autre, chaque joueur choisi une carte parmi celles proposées, jusqu'à un total de 5, qui constitueront sa main. Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire.
+  Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'`);">
 <!--Bouton des règles-->
 
     <div class="container">
@@ -121,12 +123,12 @@
 
       </div>
     </div> <!-- ferme le container -->  
-    <button type="button" class="j1 btn btn-primary">
-    Joueur 1 <span class="badge badge-light">5</span>
+    <button type="button" class="j1 btn btn-primary" value="Ajoute" onclick="compteurjoueurBleu();">
+    <input type="text" id="textCpt" style="border:0px; background-color:none;" value="5" />
     <span class="sr-only">Joueur 1</span>
     </button>
-    <button type="button" class="j2 btn btn-danger">
-    Joueur 2 <span class="badge badge-light">5</span>
+    <button type="button" class="j2 btn btn-danger" value="Ajoute" onclick="compteurjoueurRouge();">
+      <input type="text" id="textRouge" style="border:0px; background-color:none;" value="5" />
     <span class="sr-only">Joueur 2</span>
     </button>
     <button type="button" class="regles btn btn-info" data-toggle="modal" data-target="#exampleModal">
@@ -134,6 +136,28 @@
     </button>
     <a href="Draganddrop.html" class=" rejouer btn btn-warning btn-lg active" role="button" aria-pressed="true">Rejouer?</a>
 
+
+    <!-- TEST DU COMPTEUR -->
+
+      <script>
+      function compteurjoueurBleu() {
+      var t=document.getElementById("textCpt");
+      t.value=Number(t.value)+1;
+      var t=document.getElementById("textRouge");
+      t.value=Number(t.value)-1
+      }
+      </script>
+
+      <script>
+      function compteurjoueurRouge() {
+      var t=document.getElementById("textRouge");
+      t.value=Number(t.value)+1;
+      var t=document.getElementById("textCpt");
+      t.value=Number(t.value)-1;
+      }
+      </script>
+
+    <!-- FIN DU TEST COMPTEUR -->
 
     <!-- LE SCRIPT QUI CONTIENT NOTRE APPLI JS -->
     <script src="app.js"></script>
