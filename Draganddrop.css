@@ -97,3 +97,18 @@
     top:20px;
     right:25px;
 }
+.rejouer{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.j2{
+    position:absolute;
+    bottom:50px;
+    right:300px;
+}
+.j1{
+    position:absolute;
+    bottom:50px;
+    left:300px;
+}
