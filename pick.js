@@ -32,10 +32,9 @@ for(numberIndex of output) {
 //   console.log(JSON.stringify(lienIndexId))
 // })
 let html = `
-<label for="closeMe"><div class="cross"></div></label>
+<label for="closeMe"><img class="cross" src="croix-rouge-logo.png" alt="croix"></label>
 <h1 class="pickCardsTitle">Bienvenue dans MegaCards !</h1>
-<p class="pickCardsParagraph">L'un après l'autre, chaque joueur choisi une carte parmi celles proposées, jusqu'à un total de 5, qui constitueront sa main. Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire.
-Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'</p>`
+<p class="pickCardsParagraph">L'un après l'autre, chaque joueur choisi une carte parmi celles proposées, jusqu'à un total de 5, qui constitueront sa main.  Vous pouvez ensuite cliquer sur la croix pour commencer la partie!</p><p class="pickCardsParagraph"> Astuce: Il est préférable de choisir vos cartes ayant les statistiques les plus élevées car elles auront moins de chances d'être prises par votre adversaire. Pour plus d'informations, veuillez vous reportez à la section 'Règles du Jeu'.</p>`
 let id ='drag'
 
 for(carte of association) {
