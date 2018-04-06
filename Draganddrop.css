@@ -102,8 +102,8 @@
 }
 .rejouer{
     position: absolute;
-    top:0;
-    right:0;
+    bottom:1px;
+    right:300px;
 }
 .j2{
     position:absolute;
@@ -113,5 +113,10 @@
 .j1{
     position:absolute;
     bottom:50px;
+    left:300px;
+}
+.regles{
+    position: absolute;
+    bottom:10px;
     left:300px;
 }
