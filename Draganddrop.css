@@ -1,11 +1,16 @@
-.gris {
+.bleu {
     display:flex;
- 	background-color: grey;
+ 	background-color: #428bca;
+    border: 1px solid black;
+}
+.rouge{
+    display:flex;
+    background-color: #d9534f;
     border: 1px solid black;
 }
 .jaune {
     display:flex;
-	background-color: orange;
+	background-color: #ffbb33;
 	border: 1px solid black;
 }
 
