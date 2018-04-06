@@ -17,7 +17,7 @@
 #main{
     position:fixed;
     top:calc(50vh - 250px);
-    left:calc(15px + calc(50vw - 505px));
+    left:calc(9px + calc(50vw - 505px));
     display:flex;
     width:1010px;
     min-width:1010px;
@@ -40,9 +40,12 @@
 #closeMe:checked ~ #main{
     display:none;
 }
-.pickCards{
-    text-align:center;
-    margin:30px 33% 0;
+.pickCardsTitle{
+    margin:0 5px;
+}
+.pickCardsParagraph{
+    margin:0 5px;
+    text-align:justify;
 }
 .carte{
     position:relative;
